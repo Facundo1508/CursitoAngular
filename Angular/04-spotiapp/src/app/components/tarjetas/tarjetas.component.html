@@ -1,0 +1,26 @@
+<!-- <div class="card-group">
+    <div class="card-columns m-5 animated fadeIn">
+        <div *ngFor="let item of items" class="card m-3" style="width: 18rem;">
+            <img class="card-img-top" [src]="item.images | noimage" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> {{ item.name }} </h5>
+                <p class="card-text">
+                    <span *ngFor="let artista of item.artists" class="badge rounded-pill bg-success">{{ artista.name }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div (click)= "verArtista( item )" *ngFor="let item of items" class="card m-3 puntero" style="width: 18rem;">
+            <img class="card-img-top" [src]="item.images | noimage" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"> {{ item.name }} </h5>
+            <p class="card-text">
+                <span *ngFor="let artista of item.artists" class="badge rounded-pill bg-success">{{ artista.name }}</span>
+            </p>
+        </div>
+    </div>
+</div>
